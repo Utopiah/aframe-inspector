@@ -21887,7 +21887,7 @@
 	        _react2.default.createElement(
 	          'a',
 	          { href: 'https://aframe.io/aframe-registry', target: '_blank', title: 'A-Frame Registry', className: 'aregistry-button' },
-	          _react2.default.createElement('img', { src: 'https://aframe.io/aframe-inspector/assets/a-registry-logo-min.svg' })
+	          _react2.default.createElement('img', { src: '../assets/a-registry-logo-min.svg' })
 	        )
 	      );
 	    }
