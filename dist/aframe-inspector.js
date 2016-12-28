@@ -27566,6 +27566,7 @@
 
 	ShaderLoader.prototype = {
 	  loadShadersData: function loadShadersData() {
+	    return;
 	    var xhr = new window.XMLHttpRequest();
 	    // @todo Remove the sync call and use a callback
 	    xhr.open('GET', 'https://raw.githubusercontent.com/fernandojsg/aframe-shaders/master/shaders.json', false);
@@ -30302,7 +30303,7 @@
 	      var components = entity ? entity.components : {};
 	      return Object.keys(components).filter(function (key) {
 	        return _DefaultComponents2.default.indexOf(key) !== -1;
-	      }).map(function (componentName) {
+	      }).sort().map(function (componentName) {
 	        var componentData = components[componentName];
 	        var schema = AFRAME.components[componentName].schema;
 	        return _react2.default.createElement(_PropertyRow2.default, { onChange: _entity.updateEntity, key: componentName, name: componentName,
