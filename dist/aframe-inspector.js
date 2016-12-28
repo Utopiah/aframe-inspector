@@ -21877,8 +21877,8 @@
 	      });
 
 	      this.options = commonOptions.concat(registryOptions);
-	      this.options.sort(function (a, b) {
-	        return a.label >= b.label;
+	      this.options = this.options.sort(function (a, b) {
+	        return a.label === b.label ? 0 : a.label < b.label ? -1 : 1;
 	      });
 	    }
 	  }, {
@@ -21913,7 +21913,6 @@
 	        _react2.default.createElement(_reactSelect2.default, {
 	          className: 'add-component',
 	          ref: 'select',
-	          autofocus: true,
 	          options: this.options,
 	          simpleValue: true,
 	          clearable: true,
@@ -25362,7 +25361,8 @@
 	  var sceneHelpers = inspector.sceneHelpers;
 	  var objects = [];
 
-	  var grid = new THREE.GridHelper(30, 1);
+	  var grid = new THREE.GridHelper(30, 60, 0xbbbbbb, 0x888888);
+
 	  sceneHelpers.add(grid);
 
 	  var camera = inspector.inspectorCameraEl.getObject3D('camera');
@@ -27616,8 +27616,14 @@
 
 	/* globals AFRAME */
 	var Events = __webpack_require__(182);
-	var shouldCaptureKeyEvent = AFRAME.utils.shouldCaptureKeyEvent;
 
+
+	function shouldCaptureKeyEvent(event) {
+	  if (event.metaKey) {
+	    return false;
+	  }
+	  return event.target.tagName !== 'INPUT' && event.target.tagName !== 'TEXTAREA';
+	}
 
 	module.exports = {
 	  onKeyUp: function onKeyUp(event) {
