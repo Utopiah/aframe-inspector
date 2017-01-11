@@ -243,6 +243,8 @@
 	    _reactDom2.default.render(_react2.default.createElement(Main, null), div);
 	  });
 	  AFRAME.INSPECTOR = INSPECTOR;
+
+	  console.log('A-Frame Inspector Version:', ("0.4.0"), '(' + ("11-01-2017") + ' Commit: ' + ("5404d8d368f155f73325d582fa1067b78678330a\n").substr(0, 7) + ')');
 	})();
 
 /***/ },
@@ -26319,13 +26321,13 @@
 			arrowGeometry.merge(mesh.geometry, mesh.matrix);
 
 			var lineXGeometry = new THREE.BufferGeometry();
-			lineXGeometry.addAttribute('position', new THREE.Float32Attribute([0, 0, 0, 1, 0, 0], 3));
+			lineXGeometry.addAttribute('position', new THREE.Float32BufferAttribute([0, 0, 0, 1, 0, 0], 3));
 
 			var lineYGeometry = new THREE.BufferGeometry();
-			lineYGeometry.addAttribute('position', new THREE.Float32Attribute([0, 0, 0, 0, 1, 0], 3));
+			lineYGeometry.addAttribute('position', new THREE.Float32BufferAttribute([0, 0, 0, 0, 1, 0], 3));
 
 			var lineZGeometry = new THREE.BufferGeometry();
-			lineZGeometry.addAttribute('position', new THREE.Float32Attribute([0, 0, 0, 0, 0, 1], 3));
+			lineZGeometry.addAttribute('position', new THREE.Float32BufferAttribute([0, 0, 0, 0, 0, 1], 3));
 
 			this.handleGizmos = {
 
@@ -26420,7 +26422,7 @@
 					if (facing === 'z') vertices.push(Math.sin(i / 32 * Math.PI) * radius, Math.cos(i / 32 * Math.PI) * radius, 0);
 				}
 
-				geometry.addAttribute('position', new THREE.Float32Attribute(vertices, 3));
+				geometry.addAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
 				return geometry;
 			};
 
@@ -26537,13 +26539,13 @@
 			arrowGeometry.merge(mesh.geometry, mesh.matrix);
 
 			var lineXGeometry = new THREE.BufferGeometry();
-			lineXGeometry.addAttribute('position', new THREE.Float32Attribute([0, 0, 0, 1, 0, 0], 3));
+			lineXGeometry.addAttribute('position', new THREE.Float32BufferAttribute([0, 0, 0, 1, 0, 0], 3));
 
 			var lineYGeometry = new THREE.BufferGeometry();
-			lineYGeometry.addAttribute('position', new THREE.Float32Attribute([0, 0, 0, 0, 1, 0], 3));
+			lineYGeometry.addAttribute('position', new THREE.Float32BufferAttribute([0, 0, 0, 0, 1, 0], 3));
 
 			var lineZGeometry = new THREE.BufferGeometry();
-			lineZGeometry.addAttribute('position', new THREE.Float32Attribute([0, 0, 0, 0, 0, 1], 3));
+			lineZGeometry.addAttribute('position', new THREE.Float32BufferAttribute([0, 0, 0, 0, 0, 1], 3));
 
 			this.handleGizmos = {
 
