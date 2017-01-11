@@ -244,7 +244,7 @@
 	  });
 	  AFRAME.INSPECTOR = INSPECTOR;
 
-	  console.log('A-Frame Inspector Version:', ("0.4.0"), '(' + ("11-01-2017") + ' Commit: ' + ("5404d8d368f155f73325d582fa1067b78678330a\n").substr(0, 7) + ')');
+	  console.log('A-Frame Inspector Version:', ("0.4.1"), '(' + ("11-01-2017") + ' Commit: ' + ("4faa6debe5a08cddf2279a7890f953449afe5d2c\n").substr(0, 7) + ')');
 	})();
 
 /***/ },
